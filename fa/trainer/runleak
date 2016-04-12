@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+g++ -o trainer *.cpp -g
+valgrind --leak-check=yes ./trainer 4 0 ../state < tinydata.dat
+
+

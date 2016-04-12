@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+g++ -o lexicon -O2 *.cpp
+./lexicon 10000 profanity.txt < ../final/en_US/ts.txt > ../state/vocab.dat

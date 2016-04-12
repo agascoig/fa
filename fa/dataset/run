@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+g++ -o dataset dataset.cpp -O2
+# twitter data has one tweet per line
+# add punctuation to guarantee termination of each tweet
+tr '\n' '. ' <  ../final/en_US/en_US.twitter.txt > ../final/en_US/en_US.twitter2.txt
+./dataset ../final/en_US/ts.txt ../final/en_US/tts.txt ../final/en_US/en_US.blogs.txt ../final/en_US/en_US.news.txt ../final/en_US/en_US.twitter2.txt
+

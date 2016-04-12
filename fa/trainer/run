@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+g++ -o trainer *.cpp -O2
+# cogency maximizer mode
+# ./trainer ngram_length cogencymode path_to_state < stdin_corpus
+./trainer 8 1 ../state < ../final/en_US/ts.txt
+
+

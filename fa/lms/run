@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+g++ -o lms *.cpp -O2
+# cogency maximizer mode
+# ./trainer ngram_length cogencymode path_to_state < stdin_corpus
+./lms 0 6 ../state < ../final/en_US/tts.txt
+
+
